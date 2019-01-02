@@ -2,16 +2,21 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const todos = ["todo1", "todo2"];
+// TODO: implement
+// :: File -> Eff (read :: FS.Read) Array String
+const todos = (file) => {
+    return ["todo1", "todo2"];
+};
 
 class App extends Component {
   render() {
     return (
       <div className="App">
          <header className="App-header">
+            <span>file: todo...</span> {/* TODO: get App.js' path */}
             <ul>
             {
-                todos.map(x => <li>{x}</li>)
+                todos().map(x => <li>{x}</li>)
             }
             </ul>
         {/*
