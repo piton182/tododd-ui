@@ -2,11 +2,19 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const todos = ["todo1", "todo2"];
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+         <header className="App-header">
+            <ul>
+            {
+                todos.map(x => <li>{x}</li>)
+            }
+            </ul>
+        {/*
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -19,6 +27,7 @@ class App extends Component {
           >
             Learn React
           </a>
+         */}
         </header>
       </div>
     );
